@@ -107,17 +107,18 @@ var elizaKeywords = [
 
 // === UNHINGED EXPANSIONS END HERE ===
 
-// 🟢 Ensure ELIZA attaches itself when loaded
-function startEliza(container) {
+function startEliza() {
+    let container = document.querySelector(".chat");
+
     if (!container) {
-        container = document.querySelector(".chat");
-    }
-    if (!container) {
-        console.error("Chat container not found.");
+        console.error("Chat container (.chat) not found.");
         return;
     }
 
     console.log("Initializing ELIZA inside:", container);
+
+    // Clear any old content in case of reloads
+    container.innerHTML = "";
 
     // Create chat output area
     let chatOutput = document.createElement("div");
@@ -146,7 +147,7 @@ function startEliza(container) {
         let userInput = inputBox.value.trim();
         if (userInput) {
             chatOutput.innerHTML += "<p><strong>You:</strong> " + userInput + "</p>";
-            let response = elizaReply(userInput); // Assuming ELIZA has a function named elizaReply()
+            let response = elizaReply(userInput);
             chatOutput.innerHTML += "<p><strong>Oracle:</strong> " + response + "</p>";
             inputBox.value = "";
             chatOutput.scrollTop = chatOutput.scrollHeight;
@@ -161,6 +162,7 @@ function startEliza(container) {
 
     console.log("ELIZA successfully initialized.");
 }
+
 
 // 🟢 Export for external use (if hosted on a server or CDN)
 if (typeof module !== "undefined") {
