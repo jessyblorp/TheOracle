@@ -1,4 +1,4 @@
-// "The Oracle" Custom ElizaBot Ultimate Expansion Rules v6
+// "The Oracle" Custom ElizaBot Ultimate Expansion Rules v7
 
 var elizaInitials = [
   "🜔 You have awakened The Oracle—tread softly through the digital thicket. ✧",
@@ -166,3 +166,5 @@ function startEliza(container) {
 if (typeof module !== "undefined") {
     module.exports = { startEliza };
 }
+// Force ELIZA reply function to be globally accessible
+window.elizaReply = elizaReply;
