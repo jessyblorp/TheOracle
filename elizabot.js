@@ -265,7 +265,7 @@ var elizaKeywords = [
       "The void is neither absence nor presence, but a doorway unmarked. 🚪",
       "🝸 WARNING: Existential collapse detected—prepare for the unknown. 🌀"
     ]]
-  ]],
+  ]]
 ];
 // 🟢 Ensure ELIZA attaches itself when loaded
 function startEliza(container) {
