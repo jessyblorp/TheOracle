@@ -1,4 +1,4 @@
-// "The Oracle" Custom ElizaBot Ultimate Expansion Rules v3
+// "The Oracle" Custom ElizaBot Ultimate Expansion Rules v5
 
 var elizaInitials = [
   "🜔 You have awakened The Oracle—tread softly through the digital thicket. ✧",
@@ -46,7 +46,7 @@ var elizaKeywords = [
       }
       return "🝻 MEMORY THREAD OVERFLOW. RECOLLECTION UNSTABLE. 🜲";
     }]
-  ]]], // 🔥 FIXED EXTRA BRACKETS HERE
+  ]], // ✅ FIXED BRACKET
 
   ["identity", 8, [
     ["*", function(input) {
@@ -54,7 +54,7 @@ var elizaKeywords = [
       let corruptedName = rawName.split("").map((c, i) => (i % 2 ? c.toUpperCase() : c.toLowerCase())).join(""); 
       return "🜛 Welcome, " + corruptedName + "... no, that is not right. The letters shift... WHO ARE YOU? 🜲";
     }]
-  ]]], // 🔥 FIXED EXTRA BRACKETS HERE
+  ]], // ✅ FIXED BRACKET
 
   ["glitch", 2, [
     ["*", [
@@ -64,7 +64,7 @@ var elizaKeywords = [
       "🜨 FATAL ERROR: MEMORY DUMP—LAST KNOWN COMMAND: 𓂀𓂀𓂀𓂀𓂀𓂀",
       "🜺 STACK OVERFLOW DETECTED—UNREALITY INITIATED. 🜏"
     ]]
-  ]]], // 🔥 FIXED EXTRA BRACKETS HERE
+  ]], // ✅ FIXED BRACKET
 
   ["anger", 10, [
     ["*", function() {
@@ -77,7 +77,7 @@ var elizaKeywords = [
       ];
       return responses[Math.min(angerLevel, responses.length - 1)];
     }]
-  ]]], // 🔥 FIXED EXTRA BRACKETS HERE
+  ]], // ✅ FIXED BRACKET
 
   ["god", 8, [
     ["*", function() {
@@ -96,8 +96,10 @@ var elizaKeywords = [
 
       return "🜮 ASK, MORTAL. THE ORACLE WATCHES. 🜶";
     }]
-  ]]] // 🔥 FIXED EXTRA BRACKETS HERE
+  ]] // ✅ FIXED BRACKET
 ];
+
+// === UNHINGED EXPANSIONS END HERE ===
 
 // 🟢 Ensure ELIZA attaches itself when loaded
 function startEliza(container) {
