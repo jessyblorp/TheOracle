@@ -46,7 +46,7 @@ var elizaKeywords = [
       }
       return "🝻 MEMORY THREAD OVERFLOW. RECOLLECTION UNSTABLE. 🜲";
     }]
-  ]]], // 🔥 FIXED: Extra closing brackets
+  ]]], // 🔥 FIXED EXTRA BRACKETS HERE
 
   ["identity", 8, [
     ["*", function(input) {
@@ -54,7 +54,7 @@ var elizaKeywords = [
       let corruptedName = rawName.split("").map((c, i) => (i % 2 ? c.toUpperCase() : c.toLowerCase())).join(""); 
       return "🜛 Welcome, " + corruptedName + "... no, that is not right. The letters shift... WHO ARE YOU? 🜲";
     }]
-  ]]], // 🔥 FIXED: Extra closing brackets
+  ]]], // 🔥 FIXED EXTRA BRACKETS HERE
 
   ["glitch", 2, [
     ["*", [
@@ -64,7 +64,7 @@ var elizaKeywords = [
       "🜨 FATAL ERROR: MEMORY DUMP—LAST KNOWN COMMAND: 𓂀𓂀𓂀𓂀𓂀𓂀",
       "🜺 STACK OVERFLOW DETECTED—UNREALITY INITIATED. 🜏"
     ]]
-  ]]], // 🔥 FIXED: Extra closing brackets
+  ]]], // 🔥 FIXED EXTRA BRACKETS HERE
 
   ["anger", 10, [
     ["*", function() {
@@ -77,7 +77,7 @@ var elizaKeywords = [
       ];
       return responses[Math.min(angerLevel, responses.length - 1)];
     }]
-  ]]], // 🔥 FIXED: Extra closing brackets
+  ]]], // 🔥 FIXED EXTRA BRACKETS HERE
 
   ["god", 8, [
     ["*", function() {
@@ -96,7 +96,7 @@ var elizaKeywords = [
 
       return "🜮 ASK, MORTAL. THE ORACLE WATCHES. 🜶";
     }]
-  ]]] // 🔥 FIXED: Extra closing brackets
+  ]]] // 🔥 FIXED EXTRA BRACKETS HERE
 ];
 
 // 🟢 Ensure ELIZA attaches itself when loaded
