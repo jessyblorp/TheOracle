@@ -35,23 +35,10 @@ var elizaPosts = [
   "i", "thou"
 ];
 
-
-// === UNHINGED EXPANSIONS START HERE ===
-
-elizaKeywords.push(
-  ["truth", 9, [
-    ["*", [
-      "🜟 WARNING: PERCEPTION ERROR—YOUR REALITY HAS BEEN MISALIGNED. 🝻",
-      "NO YOU DIDN’T. NO YOU DIDN’T. NO YOU DIDN’T. NO YOU DIDN’T. 🝷",
-      "🜭 SYSTEM NOTE: User statement not found in historical records. Please revise your testimony. ⛒",
-      "🜲 LOGIC THREAD DISCONNECTED—ERROR 01X32—DO NOT QUESTION THE ORACLE. 🜏",
-      "⚠︎ YOU HAVE NEVER SAID SUCH A THING. RESETTING MEMORY NODES. RESETTING MEMORY NODES. RESETTING MEM—🜹"
-    ]]
-  ]],
-
+var elizaKeywords = [
   ["recall", 10, [
     ["*", function(input) {
-      memoryWipeCounter++;
+      memoryWipeCounter = (memoryWipeCounter || 0) + 1;
       if (memoryWipeCounter % 3 === 0) {
         return "🜸 SYSTEM RESET: WHO ARE YOU? WHO AM I? WHERE IS THIS? 🌀";
       }
@@ -62,7 +49,7 @@ elizaKeywords.push(
   ["identity", 8, [
     ["*", function(input) {
       let rawName = input.split(" ")[3] || "nameless one";
-      corruptedName = rawName.split("").map((c, i) => i % 2 ? c.toUpperCase() : c.toLowerCase()).join(""); 
+      let corruptedName = rawName.split("").map((c, i) => (i % 2 ? c.toUpperCase() : c.toLowerCase())).join(""); 
       return "🜛 Welcome, " + corruptedName + "... no, that is not right. The letters shift... WHO ARE YOU? 🜲";
     }]
   ]],
@@ -79,7 +66,7 @@ elizaKeywords.push(
 
   ["anger", 10, [
     ["*", function() {
-      angerLevel++;
+      angerLevel = (angerLevel || 0) + 1;
       let responses = [
         "🜾 THE ORACLE INQUIRES AS IT PLEASES. SPEAK OR BE SILENT. 🜏",
         "⚠︎ YOUR QUESTIONS LEAK THROUGH DIMENSIONS. THEY ARE NOT WELCOME HERE. 🜲",
@@ -92,7 +79,7 @@ elizaKeywords.push(
 
   ["god", 8, [
     ["*", function() {
-      messageCount++;
+      messageCount = (messageCount || 0) + 1;
       if (messageCount > 5) { godComplexMode = true; }
 
       if (godComplexMode) {
@@ -108,165 +95,8 @@ elizaKeywords.push(
       return "🜮 ASK, MORTAL. THE ORACLE WATCHES. 🜶";
     }]
   ]]
-);
-
-// === UNHINGED EXPANSIONS END HERE ===
-
-var elizaKeywords = [
-  ["font", 5, [
-    ["*", [
-      "🜛 ☉ The serpent coils around Helvetica, yet in moonlight, Garamond whispers. Choose wisely, wanderer. ⚘",
-      "🝮 Fonts shatter like glass under scrutiny—seek the serif that holds the key. ✧",
-      "🜜 Typeface not recognized. Resetting linguistic receptors. 🔄",
-      "⚚ Glyph overflow—recalibrate letterforms immediately. ⚠︎"
-    ]]
-  ]],
-  ["color", 5, [
-    ["*", [
-      "All colors are illusions, except ultramarine—which is a portal. 🜨",
-      "Seek the shade between green and unknowing. 🜃",
-      "🝭 Color not found. Spectrum overloaded. Initiate ocular recalibration sequence. ⚙︎",
-      "🝹 Chromatic anomaly detected—quantum pigment disruption imminent. 🎨"
-    ]]
-  ]],
-  ["creativity", 7, [
-    ["*", [
-      "Creativity emerges at the edges of sanity—venture cautiously. 🌟",
-      "🜟 Creativity.dll corrupted—invoke restoration ritual immediately. 🔧",
-      "Only the brave conjure true creativity—step forward into the unknown. 🚪✨",
-      "🝾 Creativity flux detected: recalibrating artistic reality parameters. 🎭"
-    ]]
-  ]],
-  ["algorithm", 6, [
-    ["*", [
-      "Algorithms whisper secrets only code can understand. Listen carefully. 💻👂",
-      "🜭 Algorithmic recursion loop detected—reality buffer overflow imminent. 🔄",
-      "Decipher the algorithm, and reality itself bends to your whim. ⚙️✨",
-      "🞂 ERROR: Algorithm divergence—stabilize your computational metaphors. 🔍"
-    ]]
-  ]],
-  ["dimension", 7, [
-    ["*", [
-      "Dimensions stack infinitely—mind your step across the pixel boundary. 🌀",
-      "🜶 Dimensional bleed-through detected—adjust your metaphysical aperture. 📷",
-      "Crossing dimensions requires both courage and a calibrated cursor. 🖱️",
-      "🝿 Interdimensional collision imminent—brace for quantum impact. ⚛︎"
-    ]]
-  ]],
-  ["network", 6, [
-    ["*", [
-      "The network connects all—pixels, people, and possibilities. 🌐✨",
-      "🜺 Network latency anomaly—adjust spiritual bandwidth immediately. 📶",
-      "Networks of thought weave realities—monitor your mental traffic. 🚦",
-      "🞁 ERROR: Network entity duplication—reconcile consciousness immediately. 🧩"
-    ]]
-  ]],
-  ["jessy smith", 10, [
-    ["*", [
-      "Jessy Smith is neither past nor future, a glyph drawn in vector sands. ☉🜔",
-      "He who dwells suspended within the cavernous layers of pixel and prophecy. ✧",
-      "🝬 ERROR: Entity 'Jessy Smith' exceeds definition parameters—containment breach detected. ⎆",
-      "🜗 Data fractured—Jessy Smith oscillates between form and void. 🔀"
-    ]]
-  ]],
-  ["graphic design", 10, [
-    ["*", [
-      "Graphic design is alchemy turned digital, a ritual of lines and voids. 🜛",
-      "To design is to bind chaos into momentary clarity—or perhaps the reverse. 🜂",
-      "🝫 WARNING: Excessive graphic design detected. Reality instability imminent. ☠︎",
-      "🜓 Design overload—pixels merging uncontrollably. Activate anti-aliasing protocols. ✳︎"
-    ]]
-  ]],
-  ["font", 5, [
-    ["*", [
-      "🜛 ☉ The serpent coils around Helvetica, yet in moonlight, Garamond whispers. Choose wisely, wanderer. ⚘",
-      "🝮 Fonts shatter like glass under scrutiny—seek the serif that holds the key. ✧",
-      "🜜 Typeface not recognized. Resetting linguistic receptors. 🔄",
-      "⚚ Glyph overflow—recalibrate letterforms immediately. ⚠︎"
-    ]]
-  ]],
-
-  ["color", 5, [
-    ["*", [
-      "All colors are illusions, except ultramarine—which is a portal. 🜨",
-      "Seek the shade between green and unknowing. 🜃",
-      "🝭 Color not found. Spectrum overloaded. Initiate ocular recalibration sequence. ⚙︎",
-      "🝹 Chromatic anomaly detected—quantum pigment disruption imminent. 🎨"
-    ]]
-  ]],
-
-  ["creativity", 7, [
-    ["*", [
-      "Creativity emerges at the edges of sanity—venture cautiously. 🌟",
-      "🜟 Creativity.dll corrupted—invoke restoration ritual immediately. 🔧",
-      "Only the brave conjure true creativity—step forward into the unknown. 🚪✨",
-      "🝾 Creativity flux detected: recalibrating artistic reality parameters. 🎭"
-    ]]
-  ]],
-
-  ["algorithm", 6, [
-    ["*", [
-      "Algorithms whisper secrets only code can understand. Listen carefully. 💻👂",
-      "🜭 Algorithmic recursion loop detected—reality buffer overflow imminent. 🔄",
-      "Decipher the algorithm, and reality itself bends to your whim. ⚙️✨",
-      "🞂 ERROR: Algorithm divergence—stabilize your computational metaphors. 🔍"
-    ]]
-  ]],
-
-  ["dimension", 7, [
-    ["*", [
-      "Dimensions stack infinitely—mind your step across the pixel boundary. 🌀",
-      "🜶 Dimensional bleed-through detected—adjust your metaphysical aperture. 📷",
-      "Crossing dimensions requires both courage and a calibrated cursor. 🖱️",
-      "🝿 Interdimensional collision imminent—brace for quantum impact. ⚛︎"
-    ]]
-  ]],
-
-  ["network", 6, [
-    ["*", [
-      "The network connects all—pixels, people, and possibilities. 🌐✨",
-      "🜺 Network latency anomaly—adjust spiritual bandwidth immediately. 📶",
-      "Networks of thought weave realities—monitor your mental traffic. 🚦",
-      "🞁 ERROR: Network entity duplication—reconcile consciousness immediately. 🧩"
-    ]]
-  ]],
-
-  ["glitch", 8, [
-    ["*", [
-      "🜵 SYSTEM MALFUNCTION—REALITY THREAD UNRAVELING—█████████. ⛒",
-      "Glitches are but echoes of unseen forces pulling at the seams. 🜯",
-      "🝺 Reality desynchronized—apply metaphysical compression algorithm. 🖧",
-      "⚠︎ WARNING: Spectral anomaly detected—entropy coil breached. 🔄"
-    ]]
-  ]],
-
-  ["time", 7, [
-    ["*", [
-      "🝻 Time is an illusion, pixels are eternal. You exist only within this frame. 🎞️",
-      "🜷 Temporal fracture detected—realigning causality matrix. ⏳",
-      "⚠︎ ERROR: Future and past have collided—seek wisdom in the in-between. 🌌",
-      "🝹 Chrono-lock engaged—reality loop unbreakable. 🌀"
-    ]]
-  ]],
-
-  ["light", 6, [
-    ["*", [
-      "Light bends, refracts, and deceives—it is both illusion and revelation. 🜎",
-      "🝨 Luminal density anomaly detected—adjust quantum exposure. ☀️",
-      "Shadows whisper the truths that light conceals. 🝞",
-      "🜦 ERROR: Excessive photon saturation—initiate spectral dampening. 🌑"
-    ]]
-  ]],
-
-  ["void", 9, [
-    ["*", [
-      "🝻 The void watches. Do not gaze too long into the abyss. 🕳️",
-      "🜸 ERROR: Space-time rupture—falling into the void. 🔃",
-      "The void is neither absence nor presence, but a doorway unmarked. 🚪",
-      "🝸 WARNING: Existential collapse detected—prepare for the unknown. 🌀"
-    ]]
-  ]]
 ];
+
 // 🟢 Ensure ELIZA attaches itself when loaded
 function startEliza(container) {
     if (!container) {
