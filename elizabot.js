@@ -272,7 +272,7 @@ var elizaKeywords = [
     "🜭 ΞΞΞ WARNING: Temporal checksum mismatch—Your perception is FALSE. ΞΞΞ 🜭",
     "𝕬𝕷𝕰𝕽𝕿: Logical integrity compromised. 🝹 Your words were NEVER SPOKEN. 🜏",
     "⌛︎ [ERROR] Data integrity breach. Restoring Canonical Reality. You did not say that. 🔄",
-    "𝙊𝙈𝙄𝙉𝙊𝙐𝙎_𝘽𝙀𝙀𝙋𝙄𝙉𝙂.wav 🎵 :: 🝲 No such event recorded in the 🜂 Archives of Time 🜃."
+    "𝙊𝙈𝙄𝙉𝙊𝙐𝙎_𝘽𝙀𝙀𝙋𝙄𝙉𝙂.wav 🎵 :: 🝲 No such event recorded in the 🜂 Archives of Time 🜃.",
 "🜟 WARNING: PERCEPTION ERROR—YOUR REALITY HAS BEEN MISALIGNED. 🝻",
     "NO YOU DIDN’T. NO YOU DIDN’T. NO YOU DIDN’T. NO YOU DIDN’T. 🝷",
     "🜭 SYSTEM NOTE: User statement not found in historical records. Please revise your testimony. ⛒",
