@@ -1,4 +1,4 @@
-// "The Oracle" Custom ElizaBot Ultimate Expansion Rules
+// "The Oracle" Custom ElizaBot Ultimate Expansion Rules v3
 
 var elizaInitials = [
   "🜔 You have awakened The Oracle—tread softly through the digital thicket. ✧",
